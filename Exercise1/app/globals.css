@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2.5rem; background: #111; color: #f5f5f5; font: 16px/1.6 system-ui, sans-serif; }
+main { max-width: 760px; margin: 0 auto; }
+a { color: #93c5fd; }
+code { color: #ff7b72; background: #242424; padding: .15rem .35rem; border-radius: 4px; }
+li { margin: .35rem 0; }
