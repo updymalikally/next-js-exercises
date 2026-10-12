@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; background: #111318; color: #f5f6f8; font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 900px; margin: 0 auto; }
+h1 { margin-bottom: .25rem; }
+.subtitle { color: #abb1bd; margin-top: 0; }
+.dashboard { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.panel { background: #1b1e25; border: 1px solid #303540; border-radius: 12px; padding: 1.1rem; }
+.panel h2 { font-size: 1.1rem; margin: 0 0 .85rem; }
+input, select, button { font: inherit; }
+input:not([type="checkbox"]), select { min-width: 0; padding: .65rem .75rem; border: 1px solid #454b57; border-radius: 7px; background: #12151a; color: inherit; }
+button { padding: .65rem .9rem; border: 0; border-radius: 7px; background: #8ab4ff; color: #10151e; font-weight: 650; cursor: pointer; }
+button:disabled { cursor: wait; opacity: .6; }
+.create-form, .search-form { display: grid; grid-template-columns: 1fr auto auto; gap: .6rem; }
+.search-form { grid-template-columns: 1fr auto auto; }
+.list-heading, .bulk-actions { display: flex; align-items: center; justify-content: space-between; gap: .65rem; flex-wrap: wrap; }
+.list-heading span, .todo-copy span, .empty { color: #abb1bd; font-size: .9rem; }
+.bulk-actions { justify-content: flex-start; margin: .4rem 0 1rem; }
+.bulk-actions button { padding: .45rem .7rem; font-size: .9rem; }
+.bulk-actions .danger { background: #ff9a9a; }
+.todo-list { list-style: none; padding: 0; margin: 0; }
+.todo { display: flex; align-items: center; gap: .75rem; padding: .8rem .2rem; border-top: 1px solid #303540; }
+.todo-copy { display: grid; flex: 1; min-width: 0; }
+.todo-copy strong { overflow-wrap: anywhere; }
+.todo.completed .todo-copy strong { text-decoration: line-through; color: #abb1bd; }
+.todo-copy span { font-size: .8rem; }
+.priority, .status { white-space: nowrap; border-radius: 999px; padding: .2rem .55rem; background: #292e38; font-size: .75rem; text-transform: capitalize; }
+.priority.high { color: #ff9a9a; }.priority.medium { color: #ffd27a; }.priority.low { color: #9ee0ae; }
+.status { color: #b9c4d8; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.error { color: #ff9a9a; }
+.success { color: #9ee0ae; }
+@media (max-width: 620px) { body { padding: 1rem; }.create-form, .search-form { grid-template-columns: 1fr; }.todo { flex-wrap: wrap; }.todo-copy { flex-basis: calc(100% - 3rem); }.priority, .status { margin-left: 2.5rem; } }
