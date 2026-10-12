@@ -5,7 +5,13 @@ A Next.js 15 App Router task manager using **NextAuth.js / Auth.js credentials**
 ## Run locally
 
 1. Install Node.js and MongoDB Community Server. Start the MongoDB service.
-2. In this folder, create `.env.local` from `.env.example` and set a private random `AUTH_SECRET`.
+2. In this folder, create `.env.local` with these values and replace the auth secret with a private random value:
+
+   ```env
+   MONGODB_URI=mongodb://127.0.0.1:27017/taskflow
+   AUTH_SECRET=replace-with-a-long-random-secret
+   AUTH_TRUST_HOST=true
+   ```
 3. Install packages and start Next.js:
 
    ```bash
